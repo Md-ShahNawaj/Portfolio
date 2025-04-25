@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Md Shah Nawaj | Data Scientist</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-xe6DwC6H4bmcFxSivcVobJXbXyxQ0Ih3qGy2S0skxWRf6Re1zOMwNnZ2/BSnNVKhTG9RPfU6uJWW3i0gFZm5Vg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        color: #333;
+        padding: 0 4rem;
+      }
+      #tsparticles {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        border-bottom: 1px solid #eee;
+      }
+      .name {
+        font-size: 1.5 rem;
+        font-weight: bold;
+        color: #000000;
+      }
+      nav a {
+        margin-left: 1rem;
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a:hover {
+        color: #1e3a8a;
+      }
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 0;
+      }
+      .hero-text {
+        max-width: 50%;
+      }
+      .hero-text h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero-text h1 span {
+        color: #1e3a8a;
+      }
+      .hero-text p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+      .buttons a {
+        text-decoration: none;
+        padding: 0.8rem 1.5rem;
+        margin-right: 1rem;
+        border-radius: 6px;
+        font-weight: 500;
+      }
+      .btn-primary {
+        background-color: #1e3a8a;
+        color: white;
+      }
+      .btn-outline {
+        border: 2px solid #1e3a8a;
+        color: #1e3a8a;
+      }
+      .hero-img img {
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        border: 5px solid #1e3a8a;
+        object-fit: cover;
+      }
+      .social-links {
+        margin-top: 2rem;
+      }
+      .social-links a {
+        margin-right: 1rem;
+        text-decoration: none;
+        font-size: 2.2rem;
+        color: #1e3a8a;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .social-links a:hover {
+        transform: scale(1.2);
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+      }
+      footer {
+        text-align: center;
+        padding: 2rem 0;
+        border-top: 1px solid #eee;
+        margin-top: 4rem;
+      }
+
+      .buttons a {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        z-index: 0;
+      }
+
+      .buttons a .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      @keyframes ripple {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+      .blue-name {
+        color: #1e3a8a;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tsparticles"></div>
+    <header>
+      <div class="name">Md Shah Nawaj</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#publication">Publication</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1 id="typewriter"></h1>
+
+        <script>
+          const textBefore = "Hello, I'm ";
+          const name = "Md Shah Nawaj";
+          const speed = 100;
+          let i = 0;
+
+          function typeWriter() {
+            if (i < textBefore.length) {
+              document.getElementById("typewriter").innerHTML +=
+                textBefore.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            } else if (i < textBefore.length + name.length) {
+              const currentChar = name.charAt(i - textBefore.length);
+              document.getElementById(
+                "typewriter"
+              ).innerHTML += `<span class="blue-name">${currentChar}</span>`;
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+          }
+
+          window.addEventListener("load", typeWriter);
+        </script>
+        <p>
+          I'm a Data Scientist passionate about machine learning, analytics, and
+          turning data into actionable insights.
+        </p>
+        <div class="buttons">
+          <a href="#contact" class="btn-primary">Contact Me</a>
+          <a href="#projects" class="btn-outline">View My Work</a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/md-shah-nawaj-017a282b3/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i
+              class="bi bi-linkedin"
+              style="color: #0077b5; font-size: 2rem"
+            ></i>
+          </a>
+          <a
+            href="https://github.com/Md-ShahNawaj"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="bi bi-github" style="color: #181717; font-size: 2rem"></i>
+          </a>
+          <a
+            href="https://kaggle.com/shahnawaj9"
+            target="_blank"
+            title="Kaggle"
+          >
+            <i
+              class="bi bi-bar-chart-line-fill"
+              style="color: #20beff; font-size: 2rem"
+            ></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="profile.jpg" alt="Md Shah Nawaj" />
+      </div>
+    </section>
+
+    <section id="about" style="margin-top: 5rem">
+      <h2
+        style="
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 2rem;
+          position: relative;
+        "
+      >
+        About Me
+        <span
+          style="
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #1e3a8a;
+            margin: 0.5rem auto 0;
+          "
+        ></span>
+      </h2>
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+          justify-content: center;
+        "
+      >
+        <div
+          style="
+            flex: 1 1 400px;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 1.2rem;
+          "
+        >
+          <p>
+            <strong>Md Shah Nawaj</strong> is a
+            <strong style="color: #1e3a8a">Data Scientist</strong> with a strong
+            background in software engineering and AI research. I specialize in
+            creating intelligent systems and data-driven solutions using tools
+            like Python, R, SQL, TensorFlow, and Power BI.
+          </p>
+          <p>
+            With academic foundations from <strong>Aston University</strong> and
+            <strong>East West University</strong>, I blend analytical thinking
+            with creativity to solve real-world problems and deliver outstanding
+            results.
+          </p>
+          <p>
+            When I’m not analyzing data, I enjoy exploring new tech,
+            contributing to open-source, and reading books on emerging
+            innovations.
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1xjDVKaiWv-YiQMW_hrE0_BBX7exsXwYk/view?usp=drive_link"
+            target="_blank"
+            class="btn-primary"
+            style="
+              display: inline-block;
+              margin-top: 1.5rem;
+              padding: 0.8rem 1.5rem;
+              border-radius: 6px;
+              color: white;
+              text-decoration: none;
+              background-color: #1e3a8a;
+              font-weight: 600;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            "
+            >Resume</a
+          >
+        </div>
+        <div
+          style="
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            max-width: 600px;
+          "
+        >
+          <div
+            style="
+              background: #ffffff;
+              padding: 1.2rem;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+              display: flex;
+              align-items: flex-start;
+              gap: 1rem;
+            "
+          >
+            <i
+              class="bi bi-mortarboard"
+              style="font-size: 1.5rem; color: #1e3a8a"
+            ></i>
+            <div>
+              <strong style="display: block; margin-bottom: 0.3rem"
+                >Education</strong
+              >
+              <p style="margin: 0">
+                MSc Data Science, Aston University<br />BSc CSE, East West
+                University
+              </p>
+            </div>
+          </div>
+          <div
+            style="
+              background: #ffffff;
+              padding: 1.2rem;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+              display: flex;
+              align-items: flex-start;
+              gap: 1rem;
+            "
+          >
+            <i
+              class="bi bi-briefcase-fill"
+              style="font-size: 1.5rem; color: #1e3a8a"
+            ></i>
+            <div>
+              <strong style="display: block; margin-bottom: 0.3rem"
+                >Experience</strong
+              >
+              <p style="margin: 0">
+                InsightEdge Analytics Intern<br />Python, Power BI, SQL
+              </p>
+            </div>
+          </div>
+          <div
+            style="
+              background: #ffffff;
+              padding: 1.2rem;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+              display: flex;
+              align-items: flex-start;
+              gap: 1rem;
+            "
+          >
+            <i
+              class="bi bi-geo-alt-fill"
+              style="font-size: 1.5rem; color: #1e3a8a"
+            ></i>
+            <div>
+              <strong style="display: block; margin-bottom: 0.3rem"
+                >Location</strong
+              >
+              <p style="margin: 0">Birmingham, United Kingdom</p>
+            </div>
+          </div>
+          <div
+            style="
+              background: #ffffff;
+              padding: 1.2rem;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+              display: flex;
+              align-items: flex-start;
+              gap: 1rem;
+            "
+          >
+            <i
+              class="bi bi-translate"
+              style="font-size: 1.5rem; color: #1e3a8a"
+            ></i>
+            <div>
+              <strong style="display: block; margin-bottom: 0.3rem"
+                >Languages</strong
+              >
+              <p style="margin: 0">English, Bengali</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" style="margin: 5rem auto; padding: 2rem 0">
+      <h2
+        style="
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 2rem;
+          position: relative;
+        "
+      >
+        My Projects
+        <span
+          style="
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #1e3a8a;
+            margin: 0.5rem auto 0;
+          "
+        ></span>
+      </h2>
+      <div
+        style="
+          display: grid;
+          gap: 2rem;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        "
+      >
+        <div
+          style="
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+          "
+        >
+          <img
+            src="project1.jpg"
+            alt="Earthquake Anomaly Detection"
+            style="width: 100%; height: auto"
+          />
+          <div style="padding: 1.5rem">
+            <h3 style="font-weight: bold">Earthquake Anomaly Detection</h3>
+            <p>
+              Unsupervised learning on seismic time series data to identify
+              anomalies that could indicate earthquakes.
+            </p>
+            <div style="margin-top: 1rem">
+              <a
+                href="https://www.kaggle.com/code/shahnawaj9/earthquake-anomaly-detection"
+                target="_blank"
+                style="color: #1e3a8a; margin-right: 1rem; font-weight: 500"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/Md-ShahNawaj/earthquake-anomaly-detection"
+                target="_blank"
+                style="color: #1e3a8a; font-weight: 500"
+                >Source Code</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+          "
+        >
+          <img
+            src="project2.jpg"
+            alt="Diabetes Risk Prediction"
+            style="width: 100%; height: auto"
+          />
+          <div style="padding: 1.5rem">
+            <h3 style="font-weight: bold">Type 2 Diabetes Risk Prediction</h3>
+            <p>
+              Classification model using health data to predict the likelihood
+              of Type 2 diabetes with ROC-AUC evaluation.
+            </p>
+            <div style="margin-top: 1rem">
+              <a
+                href="https://www.kaggle.com/code/shahnawaj9/type-2-diabetes-risk-prediction"
+                target="_blank"
+                style="color: #1e3a8a; margin-right: 1rem; font-weight: 500"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/Md-ShahNawaj/type-2-diabetes-risk-prediction"
+                target="_blank"
+                style="color: #1e3a8a; font-weight: 500"
+                >Source Code</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+          "
+        >
+          <img
+            src="img3.jpg"
+            alt="Football World Cup Website"
+            style="width: 100%; height: auto"
+          />
+          <div style="padding: 1.5rem">
+            <h3 style="font-weight: bold">Football World Cup 2022 Website</h3>
+            <p>
+              Collaborative full-stack project displaying live World Cup data
+              with a responsive design and real-time updates.
+            </p>
+            <div style="margin-top: 1rem">
+              <a
+                href="https://github.com/Md-ShahNawaj/football-worldcup-2022"
+                target="_blank"
+                style="color: #1e3a8a; margin-right: 1rem; font-weight: 500"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/Md-ShahNawaj/football-worldcup-2022"
+                target="_blank"
+                style="color: #1e3a8a; font-weight: 500"
+                >Source Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="awards" style="margin: 5rem auto; padding: 2rem 1rem">
+      <h2
+        style="
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 2rem;
+          position: relative;
+        "
+      >
+        Award Winning Moments
+        <span
+          style="
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #1e3a8a;
+            margin: 0.5rem auto 0;
+          "
+        ></span>
+      </h2>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          flex-wrap: wrap;
+          max-width: 1100px;
+          margin: auto;
+        "
+      >
+        <!-- Award 1 -->
+        <div
+          style="
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+          "
+        >
+          <img
+            src="award1.jpg"
+            alt="Award Moment 1"
+            style="width: 100%; height: 350px; object-fit: cover"
+          />
+          <div style="padding: 1rem">
+            <p style="margin: 0; font-weight: 500">
+              Receiving the Best Project Award for our Poster Presentation at
+              East West University.
+            </p>
+          </div>
+        </div>
+
+        <!-- Award 2 -->
+        <div
+          style="
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+          "
+        >
+          <img
+            src="award2.jpg"
+            alt="Award Moment 2"
+            style="width: 100%; height: 350px; object-fit: cover"
+          />
+          <div style="padding: 1rem">
+            <p style="margin: 0; font-weight: 500">
+              Honored for excellence in project design — CSE347 Poster
+              Presentation (Fall 2022).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="publication" style="margin: 5rem auto; padding: 2rem">
+      <h2
+        style="
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 2rem;
+          position: relative;
+        "
+      >
+        Publication
+        <span
+          style="
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #1e3a8a;
+            margin: 0.5rem auto 0;
+          "
+        ></span>
+      </h2>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          gap: 2rem;
+          max-width: 1100px;
+          margin: auto;
+          background: #fff;
+          border-radius: 15px;
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+          padding: 2rem;
+        "
+      >
+        <!-- Image -->
+        <div style="flex: 1; min-width: 300px">
+          <img
+            src="publication.jpg"
+            alt="ICOIACT Certificate"
+            style="width: 100%; border-radius: 12px; object-fit: cover"
+          />
+        </div>
+
+        <!-- Text Content -->
+        <div style="flex: 1; min-width: 300px">
+          <h3
+            style="
+              color: #1e3a8a;
+              font-size: 1.4rem;
+              font-weight: bold;
+              margin-top: 0;
+            "
+          >
+            Enhancing Early Diagnosis and Precise Classification of Type 2
+            Diabetes
+          </h3>
+          <p style="font-size: 1rem; color: #444; margin: 0.8rem 0 1.2rem">
+            <strong>Published in 7ICOIACT, 2024</strong><br />
+            This research explores the integration of machine learning and image
+            processing for the early detection and classification of Type 2
+            Diabetes through retinal imagery. The study combines structured
+            clinical data with visual indicators to increase prediction
+            precision, significantly improving diagnostic capabilities in
+            healthcare systems.
+            <br /><br />
+            This work was presented at the 7th International Conference on
+            Information and Communications Technology (7ICOIACT) in Japan and is
+            now officially archived on IEEE Xplore, contributing to ongoing
+            advancements in intelligent healthcare solutions.
+          </p>
+          <a
+            href="https://ieeexplore.ieee.org/document/10912889"
+            target="_blank"
+            style="color: #1e3a8a; font-weight: 500; text-decoration: none"
+          >
+            View on IEEE Xplore →
+          </a>
+        </div>
+      </div>
+    </section>
+
+<!-- Skills Section (Professional Skills) -->
+<section id="skills" style="margin: 5rem auto; padding: 2rem 0">
+  <!-- Section Title -->
+  <h2 style="text-align: center; font-size: 2rem; font-weight: bold; margin-bottom: 2rem; position: relative;">
+    My Skills
+    <span style="display: block; width: 60px; height: 3px; background-color: #1e3a8a; margin: 0.5rem auto 0;"></span>
+  </h2>
+
+  <!-- Professional Skills -->
+  <h3 style="font-size: 1.3rem; font-weight: bold; margin: 2rem 0 1rem; color: #1e3a8a;">Professional Skills</h3>
+  <div style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <div
+          style="
+            background: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          "
+        >
+          <i
+            class="fas fa-comments"
+            style="font-size: 1.5rem; color: #1e3a8a"
+          ></i>
+          <h4>Communication</h4>
+          <div style="background: #eee; border-radius: 8px; overflow: hidden">
+            <div style="width: 90%; height: 8px; background: #1e3a8a"></div>
+          </div>
+        </div>
+        <div
+          style="
+            background: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          "
+        >
+          <i class="fas fa-users" style="font-size: 1.5rem; color: #1e3a8a"></i>
+          <h4>Teamwork</h4>
+          <div style="background: #eee; border-radius: 8px; overflow: hidden">
+            <div style="width: 85%; height: 8px; background: #1e3a8a"></div>
+          </div>
+        </div>
+        <div
+          style="
+            background: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          "
+        >
+          <i
+            class="fas fa-puzzle-piece"
+            style="font-size: 1.5rem; color: #1e3a8a"
+          ></i>
+          <h4>Problem Solving</h4>
+          <div style="background: #eee; border-radius: 8px; overflow: hidden">
+            <div style="width: 88%; height: 8px; background: #1e3a8a"></div>
+          </div>
+        </div>
+        <div
+          style="
+            background: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          "
+        >
+          <i
+            class="fas fa-lightbulb"
+            style="font-size: 1.5rem; color: #1e3a8a"
+          ></i>
+          <h4>Creativity</h4>
+          <div style="background: #eee; border-radius: 8px; overflow: hidden">
+            <div style="width: 92%; height: 8px; background: #1e3a8a"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Technical Skills Wrapper -->
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; margin-top: 4rem;">
+    
+  <!-- Programming Languages -->
+  <div style="flex: 1; min-width: 250px; text-align: center">
+    <h3 style="font-size: 1.3rem; color: #1e3a8a; margin-bottom: 1.5rem">Programming Languages</h3>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+    <!-- Python -->
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="40" />
+      <p style="margin-top: 0.5rem">Python</p>
+    </div>
+    <!-- Java -->
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" width="40" />
+      <p style="margin-top: 0.5rem">Java</p>
+    </div>
+    <!-- SQL -->
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" width="40" />
+      <p style="margin-top: 0.5rem">SQL</p>
+    </div>
+    <!-- R -->
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" width="40" />
+      <p style="margin-top: 0.5rem">R</p>
+    </div>
+  </div>
+</div>
+<!-- Machine Learning / AI -->
+<div style="flex: 1; min-width: 250px; text-align: center">
+  <h3 style="font-size: 1.3rem; color: #1e3a8a; margin-bottom: 1.5rem">Machine Learning / AI</h3>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" width="40" />
+      <p style="margin-top: 0.5rem">TensorFlow</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" width="40" />
+      <p style="margin-top: 0.5rem">PyTorch</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" width="40" />
+      <p style="margin-top: 0.5rem">Scikit-learn</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" width="40" />
+      <p style="margin-top: 0.5rem">NumPy</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" width="40" />
+      <p style="margin-top: 0.5rem">Pandas</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" width="40" />
+      <p style="margin-top: 0.5rem">Seaborn</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://matplotlib.org/_static/images/logo2.svg" alt="Matplotlib" width="40" />
+      <p style="margin-top: 0.5rem">Matplotlib</p>
+    </div>
+  </div>
+</div>
+
+    <!-- Tools & Platforms -->
+    <div style="flex: 1; min-width: 250px; text-align: center">
+      <h3 style="font-size: 1.3rem; color: #1e3a8a; margin-bottom: 1.5rem">Tools & Platforms</h3>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="40" />
+      <p style="margin-top: 0.5rem">Git</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" width="40" />
+      <p style="margin-top: 0.5rem">Jupyter</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="40" />
+      <p style="margin-top: 0.5rem">VS Code</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI" width="40" />
+      <p style="margin-top: 0.5rem">Power BI</p>
+    </div>
+    <div style="text-align: center; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="40" />
+      <p style="margin-top: 0.5rem">PHP</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="max-width: 900px; margin: 4rem auto; background: #fff; padding: 2.5rem; border-radius: 16px; box-shadow: 0 12px 30px rgba(0,0,0,0.08); text-align: center; font-family: 'Segoe UI', sans-serif;">
+  <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: #1e1e1e;">
+    Contact Me
+  </h2>
+  <div style="width: 60px; height: 3px; background-color: #1e3a8a; margin: 0.5rem auto 1rem; border-radius: 2px;"></div>
+  <h3 style="font-size: 1.25rem; font-weight: 600; color: #333;">Get In Touch</h3>
+  <p style="color: #555; margin-top: 0.5rem; font-size: 0.95rem;">
+    Feel free to reach out to me for any questions or opportunities!
+  </p>
+
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2.5rem; margin-top: 2rem;">
+    <!-- Email -->
+    <div style="flex: 1; min-width: 200px; text-align: left; display: flex; align-items: center; gap: 1rem;">
+      <img src="https://img.icons8.com/ios-filled/50/1e3a8a/email.png" width="28" alt="Email Icon">
+      <div>
+        <strong style="display: block; color: #1e1e1e;">Email</strong>
+        <span style="color: #555;">nawaj.msn@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- Mobile -->
+    <div style="flex: 1; min-width: 200px; text-align: left; display: flex; align-items: center; gap: 1rem;">
+      <img src="https://img.icons8.com/ios-filled/50/1e3a8a/phone.png" width="28" alt="Phone Icon">
+      <div>
+        <strong style="display: block; color: #1e1e1e;">Mobile Number</strong>
+        <span style="color: #555;">+44 7487 421817</span>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div style="flex: 1; min-width: 200px; text-align: left; display: flex; align-items: center; gap: 1rem;">
+      <img src="https://img.icons8.com/ios-filled/50/1e3a8a/marker.png" width="28" alt="Location Icon">
+      <div>
+        <strong style="display: block; color: #1e1e1e;">Location</strong>
+        <span style="color: #555;">Birmingham, United Kingdom</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer
+      style="
+        margin-top: 5rem;
+        padding: 2rem 0;
+        text-align: center;
+        background-color: #ffffff;
+        border-top: 1px solid #e5e7eb;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          max-width: 1100px;
+          margin: auto;
+          padding: 0 2rem;
+        "
+      >
+        <div style="font-weight: bold; color: #1e3a8a; font-size: 1.2rem">
+          Md Shah Nawaj
+        </div>
+        <div style="font-size: 1rem; color: #444">
+          Thanks for visiting my portfolio website.
+        </div>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/md-shah-nawaj-017a282b3/"
+            target="_blank"
+            title="LinkedIn"
+          >
+            <i
+              class="bi bi-linkedin"
+              style="color: #0077b5; font-size: 2rem"
+            ></i>
+          </a>
+          <a
+            href="https://github.com/Md-ShahNawaj"
+            target="_blank"
+            title="GitHub"
+          >
+            <i class="bi bi-github" style="color: #181717; font-size: 2rem"></i>
+          </a>
+          <a
+            href="https://kaggle.com/shahnawaj9"
+            target="_blank"
+            title="Kaggle"
+          >
+            <i
+              class="bi bi-bar-chart-line-fill"
+              style="color: #20beff; font-size: 2rem"
+            ></i>
+          </a>
+        </div>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: #777">
+        &copy; 2025 Md Shah Nawaj. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- Scroll-to-top button with in/out animation -->
+    <a
+      href="#top"
+      id="scrollToTop"
+      title="Back to Top"
+      style="
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #1e3a8a;
+        color: white;
+        width: 44px;
+        height: 44px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        font-size: 1.2rem;
+        z-index: 1000;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+      "
+      ><i class="fas fa-arrow-up"></i
+    ></a>
+
+    <script>
+      tsParticles.load("tsparticles", {
+        fullScreen: { enable: false },
+        background: { color: "#ffffff" },
+        particles: {
+          number: { value: 60 },
+          color: { value: "#1e3a8a" },
+          shape: { type: "circle" },
+          opacity: { value: 0.4 },
+          size: { value: 3 },
+          move: { enable: true, speed: 1 },
+        },
+        interactivity: {
+          events: {
+            onHover: { enable: true, mode: "repulse" },
+            onClick: { enable: true, mode: "push" },
+          },
+          modes: {
+            repulse: { distance: 100 },
+            push: { quantity: 4 },
+          },
+        },
+      });
+    </script>
+    <script>
+      ScrollReveal().reveal("section", {
+        duration: 1000,
+        distance: "50px",
+        easing: "ease-in-out",
+        origin: "bottom",
+        reset: false,
+        interval: 100,
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".buttons a").forEach((button) => {
+        button.addEventListener("click", function (e) {
+          const circle = document.createElement("span");
+          circle.classList.add("ripple");
+
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          circle.style.width = circle.style.height = size + "px";
+          circle.style.left = e.clientX - rect.left - size / 2 + "px";
+          circle.style.top = e.clientY - rect.top - size / 2 + "px";
+
+          this.appendChild(circle);
+
+          setTimeout(() => {
+            circle.remove();
+          }, 600);
+        });
+      });
+    </script>
+  </body>
+</html>
